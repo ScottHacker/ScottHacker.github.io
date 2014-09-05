@@ -8,4 +8,53 @@
 
     <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+    
+    {% if page.unityplayer %}
+		<script type="text/javascript" src="/resources/UnityObject.js"></script>
+        <script type="text/javascript">
+        function GetUnity() {
+            if (typeof unityObject != "undefined") {
+                return unityObject.getObjectById("unityPlayer");
+            }
+            return null;
+        }
+        if (typeof unityObject != "undefined") {
+            var params = {
+                disableContextMenu: true
+            };
+            unityObject.embedUnity("unityPlayer", "{{ page.unityplayer }}", 960, 600, params);
+            
+        }
+        </script>
+        <style type="text/css">
+        div.content {
+            margin: auto;
+            width: 960px;
+            text-align: left;
+        }
+        div.missing {
+            margin: auto;
+            position: relative;
+            top: 50%;
+            width: 193px;
+        }
+        div.missing a {
+            height: 63px;
+            position: relative;
+            top: -31px;
+        }
+        div.missing img {
+            border-width: 0px;
+        }
+        div#unityPlayer {
+            cursor: default;
+            height: 600px;
+            width: 960px;
+        }
+        #unityPlayer>* 
+        {
+            outline: 0;
+        }
+        </style>
+    {% endif %}
 </head>

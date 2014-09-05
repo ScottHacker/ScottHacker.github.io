@@ -171,11 +171,7 @@
 
 .post-list {
     margin-left: 0;
-    list-style: none;
-
-    > li {
-        margin-bottom: $spacing-unit;
-    }
+	text-align: center;
 }
 
 .post-meta {
@@ -184,8 +180,21 @@
 }
 
 .post-link {
-    display: block;
+    display: inline-block;
+	max-width: 300px;
+	padding: 10px;
+	margin: 10px;
+	-webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
     font-size: 24px;
+	text-align: center;
+	background-color: #EEE;
+}
+
+.post-link:hover {
+	background-color: #FFFF99;
+	text-decoration: none;
 }
 
 

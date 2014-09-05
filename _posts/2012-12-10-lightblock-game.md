@@ -1,14 +1,12 @@
 ---
 layout: post
-title: "Light Block: a puzzle game in C#"
+title: "Light Block in C#"
+image: /images/lightblock.png
 date: 2012-12-10
 categories: project C#
 ---
 
-LightBlock
-==========
-
-![LightBlock Board](http://iam.colum.edu/students/Scott.Hacker/blog/flatpress/fp-content/images/lightblock.png)
+![LightBlock Board](/images/lightblock.png)
 
 This is a puzzle game I'd wanted to try for a while, based on floor puzzles from the game Legend of Zelda.
 

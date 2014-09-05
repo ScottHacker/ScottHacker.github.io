@@ -1,14 +1,12 @@
 ---
 layout: post
 title: "Sudoku Cheater in C#"
+image: /images/sudoku_cheater.png
 date: 2012-12-03
-categories: projects C#
+categories: project C#
 ---
 
-SudokuCheater
-=============
-
-![Sudoku Board](http://iam.colum.edu/students/Scott.Hacker/blog/flatpress/fp-content/images/sudoku_cheater.png)
+![Sudoku Board](/images/sudoku_cheater.png)
 
 Sudoku is one of my favorite puzzle games, so I decided to make a project in C# based around seeing if I could completely solve a Sudoku puzzle automatically.  Currently it seems to be able to solve just about any Sudoku puzzle.
 

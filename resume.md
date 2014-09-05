@@ -4,13 +4,16 @@ title: Resume
 permalink: /resume/
 ---
 
-## Background
 
-I am a quick and enthusiastic learner and have a wide variety of talents: focusing on programming, interested in design, and with a talent in Art. I’m very organized, professional, and have a passion for working with the logical structures of code and designing efficient systems.
+> I am a quick and enthusiastic learner and have a wide variety of talents: focusing on programming, interested in design, and with a talent in Art. I’m very organized, professional, and have a passion for working with the logical structures of code and designing efficient systems.
 
 ## Proficiency
 
 I'm a largely self-taught coder who's been learning since 2009.  My primary experience is in C#, but I've worked in AS3 and Bash shell script, and have experience with Javascript, PHP, C, F#, Lisp, and HTML/CSS.  I've worked in a number of platforms and softwares, including Unity3D, Linux (Ubuntu), Amazon Web Services, Emacs, and Visual Studio.
+
+___
+
+
 
 ## Experience
 
@@ -67,6 +70,10 @@ I worked via telecommute for a small company building virtual structures for maj
 * Did work for Sony|BMG, Showtime, and America Online
 * Dealt with expectations and evaluations from Corporate representatives with standards of corporate branding
 * Used photoshop to create textures for structures and avatars in online virtual worlds
+
+___
+
+
 
 ## Education
 

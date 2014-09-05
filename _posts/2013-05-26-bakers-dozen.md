@@ -1,0 +1,35 @@
+---
+layout: post
+title: "Trivia Game in C#"
+image: /images/bakers-dozen.JPG
+date: 2013-01-22
+categories: project C#
+unityplayer: /resources/WebPlayer.unity3d
+---
+
+{% include unity3d.html %}
+
+Details
+-------------
+
+__Total number of questions:__
+30  
+__Questions per round:__ 13  
+[View Source Code](https://gist.github.com/ScottHacker/38ef03a89c3f7c3289ea)  
+[Edit Trivia Spreadsheet](https://docs.google.com/spreadsheet/ccc?key=0Ap-_CsNwxJIFdGkyaGJ0aGdBaTY4U0tJa201U0s2VFE&usp=sharing)  
+Code and Art by Scott Hacker  
+Sounds taken from [Freesound.org](http://www.freesound.org/)  
+
+
+My Process
+-------------
+
+__Starting out:__ I like to split up any project into the smallest testable units available and build from there. So the first thing I did was create the system for maintaining trivia and not getting repeats. This was easy to do using C#'s List systems by simply removing a question from the list after it was used. Getting random questions was easy as well using built in Random functions and correlating them to array indices. Now that I had that finished, I decided to set up some data objects: I used a struct for the Trivia, which keeps track of the question, all possible responses to the question, and the correct answer. I also gave it a method to randomize the order of the responses, and a method to check an answer. Then I made a class for maintaining all the questions. I decided to use a class instead of a struct, because I wanted it to be static: there only needs to be one set of questions per game, and not having to reference it will make it easier to call. I gave the class a method for pulling a random question from the list, and getting the number of questions left in the list.
+
+__Running the Game:__ At this point, I had no GUI and no real game loop, but some data classes and proof of concept for my list system. So I started working on the game loop with an entirely text-based output (though no way to input currently). I set up a for loop which took an input for the number of trivia questions per round and looped until complete, and started over until it was out of questions. After setting up some recognition for when a round was over and when it's out of questions, I started implementing a basic answer input GUI. I didn't feel like I'd really need any 3D for this Trivia game, and I wanted to be able to use Unity's inherit button and GUI functionality, so I set up all of the visual elements of the game to run off of Unity3D's GUI system. Once I had some working (But extremely ugly) buttons, I redid the loops I had written a little to work with them. Because I needed the player to be able to click on things while the game was running, I set up the game loop as a coroutine, then I set up a response system using an integer with 0 being treated as "no response" and 1-4 being one of the buttons pressed. The coroutine would now wait for a button to be pressed before moving on to the next question. Finally, I added a small scoring system: all it is is a integer that's incremented by one when the player gets a right answer, and is displayed when the round is complete. Huzzah, it's starting to look like a trivia game now.
+
+__Formulating the GUI:__ Now I have a trivia game that has rounds, doesn't repeat trivia, picks random questions, and shuffles responses. So, it's starting to work pretty well, now I have to get it looking good. I started adding in art assets for the GUI, focusing on the trivia game part first. I had some art already that would work nicely for this, so I adapted some and made others. The positioning of the elements was largely done through trial and error using the GUIStyle functionality in Unity3D. I decided that my trivia game would need to have a timer, so I modified the coroutine to keep track of the time while it's waiting for input, and output that to a timer element I created. I decided I didn't want to drop the player into the trivia game right off the bat, so I made a Main Menu screen with a Start button, as well as a Play Again screen that asks the player if they would like to play another round or not. Lastly, I decided to add in some audio, so I pulled some sounds off of Freesound.org and tweaked them a bit in Audacity to get them where I wanted them. I decided to add a "ding" for right answers, a buzzer for wrong answers, a ticking sound for when you're running out of time, and a rooster crowing for when you've ran out of time.
+
+__Polish and finalizing:__ It pretty much looks like a trivia game now, but there's a few things I can do still. I decided that each round should have a different backdrop, and that it should be non-random (instead cycling through a list in order). So I set up a function to find what background is being used in the list and move to the next one. I also wanted to let the player know when they got a right or wrong answer, so I made some extra button textures to display green for the right answer, and red if the player picked the wrong answer. Then, I add a little wait before moving on to the next question and added a check in the GUI to find and set the textures of the proper buttons. Now, if the player gets it right it'll show the button they clicked as green, and if it gets it wrong, it'll show the right answer in green and the one they chose in red.
+
+__Adding Trivia:__ Seems weird that the last thing I do in a Trivia game is adding the Trivia, but up until this point I only needed placeholder questions for testing. I decided to go with the simplest solution first by made a method in the Questions class which would hardcode all the trivia questions in and add them one by one. After verifying that this worked and making sure that the GUI could accomodate text of various lengths, I decided to kick it up a notch. I created a second class that would download a tab-separated value formatted spreadsheet from Google Docs with all the Trivia Questions in it. This would allow me or anyone else to update the trivia on the fly without having to dig through the code. The method has to be a coroutine to give it time to download, so I create a bool to let the GUI functions know when the trivia is ready so that a player can't click start before the trivia has downloaded. I also add a check to see if the download failed: if it did, then I fall back to the hardcoded trivia. I download the spreadsheet from a PHP file rather than from Google Docs directly because Unity has a Security exception which will refuse to download if the domain doesn't have a crossdomain.xml file on it's root. Since Google does not have this, and they're not likely to add it for me, I created a PHP file and hosted it on the same domain. All the PHP file does is download from Google and display the raw data as a webpage, which the UnityPlayer reads. This will give me a Tab-separated value string that I can split by line-breaks and then by tabs into the respective questions and answers. Now I have a spreadsheet that anyone with the link to it can edit and add/remove trivia from the game. 
