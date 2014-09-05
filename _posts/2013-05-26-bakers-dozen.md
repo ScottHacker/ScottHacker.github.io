@@ -3,7 +3,6 @@ layout: post
 title: "Trivia Game in C#"
 image: /images/bakers-dozen.JPG
 date: 2013-01-22
-categories: project C#
 unityplayer: /resources/WebPlayer.unity3d
 ---
 

@@ -3,7 +3,6 @@ layout: post
 title: "Numbers-to-Words in F#"
 image: /images/FunctionalNumbersToWords.PNG
 date: 2013-01-22
-categories: project F#
 ---
 
 ![Numbers to Words in F# interactive]({{ page.image }})

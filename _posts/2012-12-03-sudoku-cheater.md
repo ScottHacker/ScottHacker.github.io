@@ -3,7 +3,6 @@ layout: post
 title: "Sudoku Cheater in C#"
 image: /images/sudoku_cheater.png
 date: 2012-12-03
-categories: project C#
 ---
 
 ![Sudoku Board]({{ page.image }})

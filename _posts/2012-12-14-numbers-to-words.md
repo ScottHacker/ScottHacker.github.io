@@ -3,7 +3,6 @@ layout: post
 title:  "Numbers-to-Words in C"
 image: /images/numberstowords.png
 date:   2012-12-14
-categories: project C
 ---
 
 ![Numbers to Words in UNIX]({{ page.image }})

@@ -3,7 +3,6 @@ layout: post
 title: "Light Block in C#"
 image: /images/lightblock.png
 date: 2012-12-10
-categories: project C#
 ---
 
 ![LightBlock Board]({{ page.image }})
