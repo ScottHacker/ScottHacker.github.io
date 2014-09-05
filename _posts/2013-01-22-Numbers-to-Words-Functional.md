@@ -1,12 +1,12 @@
 ---
 layout: post
 title: "Numbers-to-Words in F#"
-image: /images/functionalnumberstowords.png
+image: /images/FunctionalNumbersToWords.PNG
 date: 2013-01-22
 categories: project F#
 ---
 
-![Numbers to Words in F# interactive](/images/functionalnumberstowords.png)
+![Numbers to Words in F# interactive]({{ page.image }})
 
 I've been looking into more Functional Programming lately, having heard about F#, Microsoft's relatively new Functional programming language.  I decided to challenge myself in picking it up and converting my earlier code into as pure functional programming as I could.  I decided to go with converting Numbers To Words to simplify the GUI process.  
 
