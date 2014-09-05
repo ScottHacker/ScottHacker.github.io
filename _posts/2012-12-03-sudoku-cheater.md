@@ -6,7 +6,7 @@ date: 2012-12-03
 categories: project C#
 ---
 
-![Sudoku Board](/images/sudoku_cheater.png)
+![Sudoku Board]({{ page.image }})
 
 Sudoku is one of my favorite puzzle games, so I decided to make a project in C# based around seeing if I could completely solve a Sudoku puzzle automatically.  Currently it seems to be able to solve just about any Sudoku puzzle.
 

@@ -6,7 +6,7 @@ date:   2012-12-14
 categories: project C
 ---
 
-![Numbers to Words in UNIX](/images/numberstowords.png)
+![Numbers to Words in UNIX]({{ page.image }})
 
 I had heard that this deceptively easy programming assignment had been used quite a bit in interview situations.  I decided to try it myself and see how I would solve it.  I also took the opportunity to break away from C# and write something in C.
 

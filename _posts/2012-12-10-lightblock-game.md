@@ -6,7 +6,7 @@ date: 2012-12-10
 categories: project C#
 ---
 
-![LightBlock Board](/images/lightblock.png)
+![LightBlock Board]({{ page.image }})
 
 This is a puzzle game I'd wanted to try for a while, based on floor puzzles from the game Legend of Zelda.
 
