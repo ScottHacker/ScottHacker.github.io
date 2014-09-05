@@ -1,0 +1,16 @@
+# Site settings
+
+title: Scott Hacker
+email: Scott@Scott-Hacker.com
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://yourdomain.com" # the base hostname & protocol for your site
+github_username:  ScottHacker
+pages: resume
+
+
+
+# Build settings
+
+markdown: kramdown
+highlighter: pygments
+encoding: utf-8
