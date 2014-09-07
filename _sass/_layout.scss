@@ -190,10 +190,11 @@
     font-size: 24px;
 	text-align: center;
 	background-color: #EEE;
+	border: 2px solid #EEE;
 }
 
 .post-link:hover {
-	background-color: #FFFF99;
+	border: 2px solid #DDD;
 	text-decoration: none;
 }
 
