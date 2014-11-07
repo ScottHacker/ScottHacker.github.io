@@ -35,9 +35,9 @@ I helped code educational software for Grades 3-8 which could handle inputs from
 
 I worked on a temporary contract basis as a System Administrator managing over a dozen virtual servers running Ubuntu
 
-* Was able to quickly learn UNIX, Shell Scripting, emacs, Amazon AWS, and MySQL in order to get operational as a SysAdmin
+* Was able to quickly learn Linux, Shell Scripting, emacs, Amazon AWS, and MySQL in order to get operational as a SysAdmin
 * Fully Documented the setup process on all servers for easy reconfiguring and moving to VMWare
-* Learned how to quickly identify, research, and solve unfamiliar problems in UNIX.
+* Learned how to quickly identify, research, and solve unfamiliar problems in Linux.
 * Helped with the design of a music based social game in Unity 3D.
 
 ### InContext Solutions - Chicago, IL
